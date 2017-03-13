@@ -66,6 +66,11 @@ Eikon Data Item Browser is a tool that we use to reference eikon scripting.  Onc
 
 ![alt text](https://github.com/zfarberov/TR-Tutorials/blob/master/EikonScriptingProxyMarked.jpg "Starting DIB")
 
-Within DIB
+We use DIB to search for the right data item, for example, for Instrument we enter "IBM", and Data Item Name we look up is TR.RevenueHigh,we are able to:
+	
+	* Lookup the complete list of parameters with possible values (on the right side panel)
+	* Review the specific value we expect for IBM, on the main panel
+
+![alt text](https://github.com/zfarberov/TR-Tutorials/blob/master/DIBMarked.jpg "Using DIB")
 
 ### Using Python Excel to Access Data
