@@ -25,8 +25,8 @@ We learn how to retrieve the same data content via Eikon scripting from python
 ### Approach
 
 1. Using Eikon Excel for Lookup
-2. Using DIB as reference
-3. Laying out the data
+2. Using DIB as Reference
+3. Using Python Excel to Access Data
 
 ### Using Excel for Lookup
 
@@ -59,3 +59,13 @@ We learn how to retrieve the same data content via Eikon scripting from python
   The repeated lookup will allow us to learn how Company Tearsheet example is built, down to every cell,
   every function call complete with the required information.  These details we are going to use to call the same
   functions from python eikon.
+
+### Using DIB as Reference
+
+Eikon Data Item Browser is a tool that we use to reference eikon scripting.  Once we have started Eikon Scripting Proxy and signed into Thomson Reuters Eikon, we have an option to start DIB:
+
+![alt text](https://github.com/zfarberov/TR-Tutorials/blob/master/EikonScriptingProxyMarked.jpg "Starting DIB")
+
+Within DIB
+
+### Using Python Excel to Access Data
