@@ -16,11 +16,11 @@ Please refer to [Quick Start](https://developers.thomsonreuters.com/tr-eikon-scr
 
 This is how the Estimates look in Eikon Excel Company Tearsheet template example
 
-![Excel Company Tearsheet Estimates](https://github.com/zfarberov/TR-Tutorials/blob/master/excelEstimates.jpg "Excel Company Tearsheet Estimates")
+![alt text](https://github.com/zfarberov/TR-Tutorials/blob/master/excelEstimates.jpg "Excel Company Tearsheet Estimates")
 
 We learn how to retrieve the same data content via Eikon scripting from python
 
-![Same data content, python](https://github.com/zfarberov/TR-Tutorials/blob/master/pythonEstimates.jpg "Same data content, python")
+![alt text](https://github.com/zfarberov/TR-Tutorials/blob/master/pythonEstimates.jpg "Same data content, python")
 
 ### Approach
 
@@ -33,4 +33,5 @@ Laying out the data
 1. From All Programs menu, expand Thomson Reuters menu item and select Thomson Reuters Eikon - Microsoft Excel.
 2. Once Excel is open, from Thomson Reuters menu item choose "Sign In" option, and enter your Thomson Reuters Eikon credentials, hitting "Sign In" button.  The status should change to "Online"
 
-![Eikon Excel Online](https://github.com/zfarberov/TR-Tutorials/blob/master/EioknExcelSignIn.jpg "Eikon Excel Online")
+![alt text](https://github.com/zfarberov/TR-Tutorials/blob/master/EikonExcelSignIn.jpg "Eikon Excel Online")
+
