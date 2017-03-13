@@ -44,11 +44,11 @@ We learn how to retrieve the same data content via Eikon scripting from python
 
  ![alt text](https://github.com/zfarberov/TR-Tutorials/blob/master/EikonExcelTearsheet.jpg "Eikon Excel Company Tearsheet")
 
- 4. We are looking at the template, or example "Company Tearsheet".  In this tutorial we will aim to replicate the data retrieval in Estimates parts of this example by using eikon scripting from python.  Let's start by clicking on the bottom tab "Company Tearsheet", while zeroing-in on the section "Estimates"
+4. We are looking at the template, or example "Company Tearsheet".  In this tutorial we will aim to replicate the data retrieval in Estimates parts of this example by using eikon scripting from python.  Let's start by clicking on the bottom tab "Company Tearsheet", while zeroing-in on the section "Estimates"
 
  ![alt text](https://github.com/zfarberov/TR-Tutorials/blob/master/EikonExcelTearsheetEstimatesMarked.jpg "Eikon Excel Company Tearsheet Estimates")
 
- 5. Now we are ready for the most important of the steps in lookup, the actual lookup.  As we click on one
+5. Now we are ready for the most important of the steps in lookup, the actual lookup.  As we click on one
  of the cells that contain the estimate functions, for example E24, in the Excel formula window we see the  function call that is required to pull this data:
 
   ![alt text](https://github.com/zfarberov/TR-Tutorials/blob/master/ExcelFunctionLookupMarked.jpg "Eikon Excel Function Lookup")
