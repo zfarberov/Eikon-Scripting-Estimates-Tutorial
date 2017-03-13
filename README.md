@@ -44,7 +44,7 @@ We learn how to retrieve the same data content via Eikon scripting from python
 
  ![alt text](https://github.com/zfarberov/TR-Tutorials/blob/master/EikonExcelTearsheet.jpg "Eikon Excel Company Tearsheet")
 
- 4.  We are looking at the template, or example "Company Tearsheet".  In this tutorial we will aim to replicate the data retrieval in Estimates parts of this example by using eikon scripting from python.  Let's start by clicking on the bottom tab "Company Tearsheet", while zeroing-in on the section "Estimates"
+ 4. We are looking at the template, or example "Company Tearsheet".  In this tutorial we will aim to replicate the data retrieval in Estimates parts of this example by using eikon scripting from python.  Let's start by clicking on the bottom tab "Company Tearsheet", while zeroing-in on the section "Estimates"
 
  ![alt text](https://github.com/zfarberov/TR-Tutorials/blob/master/EikonExcelTearsheetEstimatesMarked.jpg "Eikon Excel Company Tearsheet Estimates")
 
@@ -59,4 +59,3 @@ We learn how to retrieve the same data content via Eikon scripting from python
   The repeated lookup will allow us to learn how Company Tearsheet example is built, down to every cell,
   every function call complete with the required information.  These details we are going to use to call the same
   functions from python eikon.
-
