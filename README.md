@@ -74,3 +74,101 @@ We use DIB to search for the right data item, for example, for Instrument we ent
 ![alt text](https://github.com/zfarberov/TR-Tutorials/blob/master/DIBMarked.jpg "Using DIB")
 
 ### Using Python Excel to Access Data
+
+And now we proceed to the most interesting part.  We know the data items we would like to use by looking
+it up in Eikon Excel examples, and we can parametrize the data items per requirement, by looking up the data items
+in Data Item Browser.
+
+1.  We start Python interpreter.  We will work on the python script in separate text editor, pasting and running the script into python interpreter when we are ready to test. 
+2.  Let us flex our muscle by running the following little script:
+
+ ```
+ df, err = ek.get_data("IBM", 
+					[ 
+                    ('TR.RevenueActValue', {'Period': 'FY0','Scale': 6, 'Curn': 'USD'}),
+                    ('TR.RevenueMeanEstimate', {'Period': 'FY1','Scale': 6, 'Curn': 'USD'}),
+                    ('TR.RevenueMeanEstimate', {'Period': 'FY2','Scale': 6, 'Curn': 'USD'})
+                    ])
+ df
+ ```
+
+ We should see the output:
+
+  Instrument  Revenue - Actual  Revenue - Mean Estimate  \
+0        IBM             79919              78717.97129
+
+   Revenue - Mean Estimate
+0              78663.43974
+
+3. Next we try to retrieve data for the three different periods, as required for Esimates
+data region, while laying the results out into rows:
+
+ ```
+ df1, err = ek.get_data("IBM", 
+					[ 
+                    ('TR.RevenueActValue', {'Period': 'FY0','Scale': 6, 'Curn': 'USD'}),
+                    ('TR.RevenueMeanEstimate', {'Period': 'FY1','Scale': 6, 'Curn': 'USD'}),
+                    ('TR.RevenueMeanEstimate', {'Period': 'FY2','Scale': 6, 'Curn': 'USD'})
+                    ],sort_on=None, output='pandas', debug=True)
+
+ df2, err = ek.get_data("IBM", 
+					[ 
+                    ('TR.RevenueHigh', {'Period': 'FY1','Scale': 6, 'Curn': 'USD'}),
+                    ('TR.RevenueHigh', {'Period': 'FY2','Scale': 6, 'Curn': 'USD'}),
+                    ('TR.RevenueLow', {'Period': 'FY1','Scale': 6, 'Curn': 'USD'}),
+                    ('TR.RevenueLow', {'Period': 'FY2','Scale': 6, 'Curn': 'USD'})
+                    ],sort_on=None, output='pandas', debug=True)
+
+
+ df3, err = ek.get_data("IBM", 
+					[ 
+                    ('TR.RevenueLow', {'Period': 'FY1','Scale': 6, 'Curn': 'USD'}),
+                    ('TR.RevenueLow', {'Period': 'FY2','Scale': 6, 'Curn': 'USD'})
+                    ],sort_on=None, output='pandas', debug=True)
+
+
+
+ df4, err = ek.get_data("IBM", 
+					[ 
+                    ('TR.RevenueMeanEstimate', {'Period': 'FY1','RollPeriods': 'False','Scale': 6, 'Curn': 'USD'}),
+                    ('TR.RevenueMeanEstimate', {'Period': 'FY2','RollPeriods': 'False','Scale': 6, 'Curn': 'USD'})
+                    ],sort_on=None, output='pandas', debug=True)
+
+ df1
+ df2
+ df3
+ df4
+ ```
+
+ We see the output:
+
+ >>> df1
+  Instrument  Revenue - Actual  Revenue - Mean Estimate  \
+ 0        IBM             79919              78717.97129
+
+   Revenue - Mean Estimate
+ 0              78663.43974
+ >>> df2
+  Instrument  Revenue - High  Revenue - High  Revenue - Low  Revenue - Low
+ 0        IBM           80564           81180          76706          76078
+ >>> df3
+  Instrument  Revenue - Low  Revenue - Low
+ 0        IBM          76706          76078
+ >>> df4
+  Instrument  Revenue - Mean Estimate  Revenue - Mean Estimate
+ 0        IBM              78717.97129              78663.43974
+ >>>
+
+4. Now we are looking to retrieve the complete set of data required, while formatting the output into columns:
+
+ Please refer to the [complete script](https://github.com/zfarberov/TR-Tutorials/blob/master/quick-start/Estimates3.py)
+
+ Please note that there can be only one request to get the field in get_data call.  Therefore, for the same field call, but with different parameters, we use another call.
+
+ When we run this script, the result should be:
+
+ ![alt text](https://github.com/zfarberov/TR-Tutorials/blob/master/pythonEstimatesCropped.jpg "Same data content, python")
+
+ We'd like to conclude this tutorial by inviting you to experiment with both the tools and the approach.  Hope you will find the tools useful and approach working, but not set in stone.  We encourage you to share your results and successes, as well as your questions and problems with us on
+
+[Q&A Forum](https://community.developers.thomsonreuters.com)
